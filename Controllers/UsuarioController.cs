@@ -32,7 +32,10 @@ namespace lapirana_pc02.Controllers
         } 
 
        public IActionResult Editar(Usuario u){
-           
+            if(ModelState.IsValid){
+                return View("Editar");
+            }
+            return View();
        }
     }
 }
